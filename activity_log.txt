@@ -1,0 +1,66 @@
+
+2020-06-15 10:43:30 
+ ii..ii.........iiiiiiiiiiii..iii.iiii.ii.iii
+2020-06-15 10:46:37 C:/Users/Omari/AppData/Roaming/pico-8/carts/games/celeste.p8.png
+ iirrrrrrrrrrrr_________r__rrrrrrrrrrrrrrrrrr_______ricccccccccccccccccc.cic.....
+ ....c
+2020-06-15 10:57:21 
+ ic.........iii..i.........ccccirrrr_icc.irr_________rcc.ccciiiiri
+2020-06-15 11:02:23 C:/Users/Omari/AppData/Roaming/pico-8/carts/demos/hello.p8
+ iri
+2020-06-15 11:02:32 C:/Users/Omari/AppData/Roaming/pico-8/carts/demos/api.p8
+ rr_i
+2020-06-15 11:02:44 C:/Users/Omari/AppData/Roaming/pico-8/carts/demos/jelpi.p8
+ rrrrcccci.i
+2020-06-15 11:03:17 C:/Users/Omari/AppData/Roaming/pico-8/carts/demos/cast.p8
+ rrrrr_________ri
+2020-06-15 11:04:14 C:/Users/Omari/AppData/Roaming/pico-8/carts/demos/collide.p8
+ rrrrrrccccccccccccciii
+2020-06-15 11:05:20 C:/Users/Omari/AppData/Roaming/pico-8/carts/demos/wander.p8
+ rrrrrrrrrrrrr
+2020-06-15 12:40:07 
+ i........cc.........c.........cc.........cc.....cii
+2020-06-15 14:40:22 C:/Users/Omari/AppData/Roaming/pico-8/carts/demos/api.p8
+ iiiccccccccccccc.........iii.........iiiii
+2020-06-15 14:47:53 C:/Users/Omari/AppData/Roaming/pico-8/carts/projects/pong.p8
+ iiicccc.ccccccc.....cccciirrr_____ri.iiii......i........iiiii..c
+2020-06-15 14:51:09 
+ i.iiici
+2020-06-15 14:51:30 C:/Users/Omari/AppData/Roaming/pico-8/carts/projects/pong.p8
+ iiri.c.........c.ccccccccc.........c.cccc........cccc..ccccccccciicciriiiccccccc
+ ccccc.cccccccc.........ccccccccc.rrcc...c.....cccccc.cccccccccccrccccccrricccccc
+ rr_________ccc.ri........i....cc..ccccc.........cccccccc.........ccccccc.rcccccc
+ ccccccccccccccc...c.ccc..cccccccccccrr_________rii.cc.cc........cccccccc.ccccccc
+ ....cccc......ccc.........c.ccccccccccrcccccccccccc.....cc......cccicccccriccrrr
+ _________r______ccccrrrrrrrrcccicrrrricccccc...iii.....cccccii..ccccirccc.cc..cc
+ c.........cc...cc..cc.....cc.c....cc.cc.........ccccccc.c...ccccccccc.........cc
+ ccccccccccrrrrrrrrr_________r___icc.ccccrrrcccccccccccc.cccccc..cccc.cccrccc...c
+ ccccccccccccccc....ccrccccc..c.c..ccccccccc.....ccccccccccccc.........c......ccc
+ ccccccc.cc.cccccccccccccccccccrcccccrccccc........cccccc.cccc.........ccccccc...
+ cc.........c..cccccccccccccccc.cccccccccicccirrcccccrcccccccccccccc..rccccrccccc
+ ccccccc...ccc.cccccccccc.........ccc.ccccccc.........ccccccc..ccccciccc.cc......
+ ...ciiccccrrrcccccrrrcc...ccrrccccr_cccc.........ccc.........rrc..ir__r_cccccccc
+ cc.........ccccccc.cccccccc......cccc....ccc.........cccccccc.........cc...cc.cc
+ ccccccc..cccccccccc..c.cccc.cc.cccccc......c..ccccccccccccrc.cccccccccc.c..ccccc
+ cccc.cccccccccc.cccc.cccccc..c.........cc.ccccccc.....cc....c..c.........cc.c.cc
+ ccccccc..cccc.cccccc.ccccc.cccrccccccc.c.c.c...ccc....ciciccc....cccrccciicccii.
+ ........cc.........rr_________rrrccc.........rcccccccccccccccccccccrcccrrrrrc...
+ .....ccci.........rccc.........cc.........cc.........cciii...rr_________ri...i..
+ ..i.rr_________rr_ii........ii........ir__rr_rrrrr_________rrr___rr________rr___
+ _r_____r_________rrrrrr_____r__rr_r__rric.........crrrrr
+2020-06-15 19:59:36 
+ iii
+2020-06-15 19:59:45 C:/Users/Omari/AppData/Roaming/pico-8/carts/projects/pong.p8
+ rrrrr
+2020-06-15 20:02:11 
+ iri
+2020-06-15 20:02:20 C:/Users/Omari/AppData/Roaming/pico-8/carts/projects/pong.p8
+ rrr__rr_i.irrr
+2020-06-15 20:25:24 
+ iiii
+2020-06-15 20:25:36 C:/Users/Omari/AppData/Roaming/pico-8/carts/projects/pong.p8
+ rrrccccc.........crrr_____rrr_rri.........rr___rrrrrrr_rc.........rrr_rrr_rii...
+ .....ri....cirrrii.........rri.rrii...r_ii.....iiri.........rrr_rrrrrr___rrrrrri
+ .....ii.........i....ii........ri.........rr_r_________rrii..i.....ii.rrrri....i
+ i...rrrrrrrii.......i.irri...i.........rrrri.........irrrrrrrrrrrrrrrii.........
+ rrrrrrri.i.........
