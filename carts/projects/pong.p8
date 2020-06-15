@@ -13,6 +13,7 @@ ball_radius = 4
 
 function _init()
 	init_paddles()
+	init_ball()
 end	
 
 function _update()
@@ -29,7 +30,12 @@ function _update()
  	if (btn(3,1)) then
  		p2.y=p2.y+1
  	end
- 	update_ball(ball)
+	update_ball(ball)
+	if (p1.score > 5 or p2.score > 5) then
+		init_paddles()
+		init_ball()
+	end	
+
 end
 
 function _draw()
@@ -37,8 +43,8 @@ function _draw()
 	draw_paddle(p1.x, p1.y, 8)
 	draw_paddle(p2.x, p2.y, 12)
 	score = p1.score.. "|"..p2.score
-	dist1 = 0.4*((((p1.y + paddle_height/2)-ball.y)/paddle_height)/0.5)
-	dist2 = 0.5+0.4*((((p2.y + paddle_height/2)-ball.y)/paddle_height)/0.5)
+	dist1 = 0.1*((((p1.y + paddle_height/2)-ball.y)/paddle_height)/0.5)
+	dist2 = 0.5+0.1*((((p2.y + paddle_height/2)-ball.y)/paddle_height)/0.5)
 	
   print(score, 64 - (#score * 2), 4) 
   print(dist1, 50, 10)
@@ -57,8 +63,10 @@ function init_paddles()
 end
 
 function init_ball() 
-	ball.x = 0
-	ball.y = 0
+	ball.x = 64
+	ball.y = 64
+	ball.vel = 1
+	ball.angle = rnd()
 end
 
 function draw_paddle(x,y, col)
@@ -83,14 +91,14 @@ function update_ball(ball)
 	end
 
 	if (ball.y < 0 or ball.y > 128) then
-		ball.angle += 0.5
+		ball.angle = 1 - ball.angle
 	end
 
 	if (check_coll(ball, p1)) then
 		distfrompaddlecentre = ((p1.y + paddle_height/2))/paddle_height
 		printh("p1 ".. distfrompaddlecentre, "log.txt")
 		ball.angle = 0.5-ball.angle
-		--ball.angle = 0.2*(distfrompaddlecentre/0.5)
+		ball.angle = -0.1*((((p1.y + paddle_height/2)-ball.y)/paddle_height)/0.5)
 		ball.vel += 0.05
 	end 
 
@@ -98,7 +106,7 @@ function update_ball(ball)
 		distfrompaddlecentre = ((p2.y + paddle_height/2)-ball.y)/paddle_height
 		printh("p2 " .. distfrompaddlecentre, "log.txt")
 		ball.angle = 0.5-ball.angle
-		--ball.angle = 0.5+0.2*(distfrompaddlecentre/0.5) 
+		ball.angle = 0.5+0.1*((((p2.y + paddle_height/2)-ball.y)/paddle_height)/0.5)
 		ball.vel += 0.05
 	end
 	
