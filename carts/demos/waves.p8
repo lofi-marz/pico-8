@@ -1,17 +1,24 @@
 pico-8 cartridge // http://www.pico-8.com
-version 19
+version 27
 __lua__
 -- waves demo
 -- by zep
 
 r=64
+n=1
+function _update()
+	if btn(2) then n+=0.5 end
+	if btn(3) then n-=0.5 end
+	if btn(4) then n=1 end
+end
 
 function _draw()
-	cls()
+	 cls()
+	 
 		for y=-r,r,3 do
 			for x=-r,r,2 do
 				local dist=sqrt(x*x+y*y)
-				z=cos(dist/40-t())*6
+				z=cos(dist/40-t()^n)*6
 				pset(r+x,r+y-z,6)
 		end
 	end
