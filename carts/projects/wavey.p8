@@ -15,14 +15,13 @@ function _draw()
 	cls()
 	for y = -16, 144, 4 do
 		for x = -16, 144, 4  do
-			
 			dist = sqrt((centerx-x)^2+(centery-y)^2) 
-			col = ((y/4)%7)+8
+			colour = ((y/4)%7)+8
 			fy = t-dist
-			fx = t-dist
-			yoffset = cos(fy/50)*10
-			xoffset = 0--sin(fx/50)*10
-			pset(x+xoffset,y+yoffset, col)
+			--fx = t-dist
+			yoffset = sin(fy/60)*10
+			xoffset = 0--cos(fx/60)*10
+			pset(x+xoffset,y+yoffset, colour)
 			print(centerx..","..centery, 8, 8)
 		end
 	end
