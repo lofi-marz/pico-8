@@ -3,8 +3,10 @@ version 27
 __lua__
 
 t = 0
+period = 60
 centerx = 64
 centery = 64
+distances = {}
 function _update()
 	if (btn(0)) centerx -= 1 
 	if (btn(1)) centerx += 1 
@@ -13,19 +15,35 @@ function _update()
 end
 function _draw()
 	cls()
-	for y = -16, 144, 4 do
-		for x = -16, 144, 4  do
-			dist = sqrt((centerx-x)^2+(centery-y)^2) 
-			colour = ((y/4)%7)+8
-			fy = t-dist
-			--fx = t-dist
-			yoffset = sin(fy/60)*10
-			xoffset = 0--cos(fx/60)*10
-			pset(x+xoffset,y+yoffset, colour)
-			print(centerx..","..centery, 8, 8)
+	for y = -16, 144, 2 do
+		for x = -16, 144, 2  do
+			ab = (centerx-x)^2+(centery-y)^2
+			if (distances[ab] == nil) then
+				distances[ab] = sqrt(ab)
+				dist = sqrt(ab)
+			else
+				dist = distances[ab]
+			end			
+			fy = t-dist --The further from the centre, the further shifted
+			fx = t-dist
+			yoffset = sin(fy/period)*10 --pico-8 does angles as fractions of a turn 0-1
+			xoffset = cos(fx/period)*10
+			colour = (((yoffset)/4)%7)+8 --Cycle through the rainbow
+			pset(x,y+yoffset, colour)
+			print()
+			
 		end
 	end
 	t += 1
+	t %= period*2
+	
+end
+
+function print_table(table)
+	print("Printing table")
+	for k,v in pairs(table) do
+		print(k)
+	end	
 end
 __gfx__
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
