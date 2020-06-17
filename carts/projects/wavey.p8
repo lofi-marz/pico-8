@@ -15,8 +15,8 @@ function _update()
 end
 function _draw()
 	cls()
-	for y = -16, 144, 2 do
-		for x = -16, 144, 2  do
+	for y = -16, 144, 4 do
+		for x = -16, 144, 4  do
 			ab = (centerx-x)^2+(centery-y)^2
 			if (distances[ab] == nil) then
 				distances[ab] = sqrt(ab)
