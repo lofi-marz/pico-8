@@ -24,7 +24,7 @@ function _draw()
 		print(legs, 8,8)
 		
 		for y = 1,legs do
-			xoffset = -0.5*y*sin((t+y)/30)
+			xoffset = -0.5*y*(sin((t+y)/30)+sin((t+y)/15))
 			yoffset = -y*8
 			if (y == legs) then
 				s = 1 
