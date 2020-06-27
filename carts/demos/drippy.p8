@@ -1,5 +1,5 @@
 pico-8 cartridge // http://www.pico-8.com
-version 19
+version 27
 __lua__
 -- drippy
 -- by zep
@@ -17,6 +17,8 @@ function _update()
 	if (btn(1)) then x=x+1 end
 	if (btn(2)) then y=y-1 end
 	if (btn(3)) then y=y+1 end
+	x %= 128
+	y %= 128
 	
 	c=c+1/8
 	if (c >= 16) then c = 8 end
@@ -32,7 +34,7 @@ function _update()
 	
 	--drip down if it is colourful
 	if (col > 1) then
-		pset(x2,y2+1,col) 
+		pset(x2,y2*2,col) 
 	end
 	end
 	

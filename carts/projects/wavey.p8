@@ -8,6 +8,7 @@ centerx = 64
 centery = 64
 distances = {}
 periods = {}
+
 function _update()
 	if (btn(0)) centerx -= 1 
 	if (btn(1)) centerx += 1 
@@ -16,17 +17,17 @@ function _update()
 end
 function _draw()
 	cls()
-	usedDict = false
-	for y = -16, 144, 4 do
+	waveys.idkyet()	
+
+	t += 1
+	print(stat(7), 4, 4, 7)
+end
+
+function upndown()
+		for y = -16, 144, 4 do
 		for x = -16, 144, 4  do
 			ab = (centerx-x)^2+(centery-y)^2
-			if (distances[ab] == nil) then
-				distances[ab] = sqrt(ab)
-				dist = sqrt(ab)
-			else
-				dist = distances[ab]
-				
-			end			
+			dist = sqrt(ab)	
 			fy = (t-dist) --The further from the centre, the further shifted
 			fx = t-dist
 			--[[if (periods[fy/period] == nil) then
@@ -39,17 +40,44 @@ function _draw()
 			end]]--
 			 --pico-8 does angles as fractions of a turn 0-1
 			yoffset = (sin((fy/period)))*8
-			xoffset = 1+0*(cos((fx/period)))*8	
+			xoffset = 0*(cos((fx/period)))*8	
 			colour = (t/120+(xoffset+yoffset)/4)%7+8 --Cycle through the rainbow depending on where you are in the cycle, and shift the colour for each point along occasionally
 			pset(x+xoffset,y+yoffset, colour)
-			
-			
 		end
 	end
-
-	t += 1
-	print(stat(7), 4, 4, 7)
 end
+
+function swirly()
+	for y = -16, 144, 4 do
+		for x = -16, 144, 4  do
+			ab = (centerx-x)^2+(centery-y)^2
+			dist = sqrt(ab)	
+			fy = (t-dist) --The further from the centre, the further shifted
+			fx = t-dist
+			yoffset = (sin((fy/period)))*8
+			xoffset = (cos((fx/period)))*8	
+			colour = (t/120+(xoffset+yoffset)/4)%7+8 --Cycle through the rainbow depending on where you are in the cycle, and shift the colour for each point along occasionally
+			pset(x+xoffset,y+yoffset, colour)
+		end
+	end
+end
+
+function idkyet()
+	for y = -16, 144, 4 do
+		for x = -16, 144, 4  do
+			--ab = (centerx-x)^2+(centery-y)^2
+			--dist = sqrt(ab)	
+			fy = t-x --The further from the centre, the further shifted
+			fx = t-y
+			yoffset = (sin((fy/period)))*8
+			xoffset = (cos((fx/period)))*8	
+			colour = ((yoffset)/4)%7+8 --Cycle through the rainbow depending on where you are in the cycle, and shift the colour for each point along occasionally
+			pset(x+xoffset,y+yoffset, colour)
+		end
+	end
+end
+
+waveys = {upndown = upndown, swirly = swirly, idkyet = idkyet}
 
 function print_table(table)
 	print("Printing table")
